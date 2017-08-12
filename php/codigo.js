@@ -186,6 +186,7 @@ function cargar(){
           
            agregar = $(ui.draggable).attr('src');
           alert(agregar);
+          alert(agregar);
           idA= $( this ).attr("id");
           alert (idA);
           $("#hojaBl"+idA+"").append("<img src="+agregar+">");

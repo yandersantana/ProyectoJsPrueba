@@ -1,0 +1,145 @@
+.iconos2 img{
+    width: 120px;
+    height: 100px;
+    float: right;
+    margin-top: 1px;
+   
+}
+
+.contenedorHome {
+    width: 189px;
+    height: 189px;
+    right: 30px;
+    top: -6px;
+    background: url(../imagenes/2.png)no-repeat;
+    background-position: top;
+    background-size: 60%;
+     float: right;
+    text-align: center;
+    
+}
+
+.fondoPaginas {
+    background: url(../imagenes/fondo.jpg) fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.fondo {
+    background: url(../imagenes/imagendeprueba.jpg) fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+.caja2 {
+    margin-top: 270px;
+    background-color: transparent;
+    box-sizing: border-box;
+}
+.img-responsive,
+.thumbnail>img,
+.thumbnail a>img,
+.carousel-inner>.item>img,
+.carousel-inner>.item>a>img {
+    display: block;
+    max-width: 70%;
+    height: auto;
+}
+@media (max-width: 1200px) {
+    .caja2 {
+        display: none;
+    }
+
+}
+.imagenesUl {
+    width: 90.5%;
+}
+
+.tit{
+    text-align: center;
+     color:  #0099ff;
+     
+}
+
+.tit2{
+     color:#3399ff;
+     
+}
+
+
+.imagenes3 {
+    position: relative;
+    width: 221px;
+    height: 176px;
+    overflow: hidden;
+    margin-bottom: 2px;
+    z-index: 1;
+    background-color: transparent;
+   
+}
+.imagenes2 {
+    position: relative;
+   
+    overflow: hidden;
+    margin-bottom: 2px;
+    z-index: 1;
+    width: 150px;
+    height: 100px;
+    background-color: transparent;
+   
+}
+.contenedorli {
+    width: 189px;
+    height: 189px;
+    right: 30px;
+    top: -6px;
+    background: url(../imagenes/1.png)no-repeat;
+    background-position: top;
+    background-size: 60%;
+}
+
+.contenedorli2 {
+    width: 189px;
+    height: 189px;
+    right: 30px;
+    top: -6px;
+    background: url(../imagenes/3.png)no-repeat;
+    background-position: top;
+    background-size: 60%;
+     float: right;
+     text-align: center
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: right;
+}
+
+li:hover {
+    text-decoration: none;
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+li a {
+    display: block;
+    text-align: center;
+    padding-top: 90px;
+    text-decoration: none;
+    color: black
+}
+
+li a:hover {
+    text-decoration: none;
+    color: black
+}

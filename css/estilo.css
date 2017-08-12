@@ -49,7 +49,9 @@
 }
 
 body{
-    background: url("../imagenes/fondo.jpg") fixed;
+    background: url("../imagenes/fondo.jpg") fixed no-repeat;
+      background-size: cover;
+    padding-top: 1px;
 }
 
 .contenedorli {
