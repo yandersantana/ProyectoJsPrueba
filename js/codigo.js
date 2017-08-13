@@ -3,8 +3,12 @@ var paginas = 4;
 var id = 0;
 var cuentos = [];
 var cuentosIm = [];
+
 var idCuento = 5;
+//esto es para que aparezcan en la pagina Verhistorias como predeterminadas
 var cuentoCaperucita = ["../imagenes/historias/1.jpg", "../imagenes/historias/2.jpg", "../imagenes/historias/3.jpg"];
+var cenicienta = ["../imagenes/historias/c1.jpg", "../imagenes/historias/c2.jpg", "../imagenes/historias/c3.jpg", "../imagenes/historias/c4.jpg", "../imagenes/historias/c5.jpg", "../imagenes/historias/c6.jpg", "../imagenes/historias/c7.jpg", "../imagenes/historias/c8.jpg"];
+var aladin = ["../imagenes/historias/a1.jpg"];
 
 /*function Cuento(nombre,descripcion,creditos){
     idCuento++;  
@@ -14,45 +18,62 @@ var cuentoCaperucita = ["../imagenes/historias/1.jpg", "../imagenes/historias/2.
     var imagenes=[];     
 };*/
 class Cuento {
-    constructor(titulo, descripcion, creditos) {
+    constructor(titulo, descripcion, creditos, imagenes) {
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.creditos = creditos;
-        this.imagenes = cuentosIm;
-        this.idC = idCuento;
+        this.imagenes = imagenes;
+
     }
 }
 
 function cuentosPorDefault() {
-    for (i = 0; i < 5; i++) {
-        cuent = new Cuento("CaperucitaRoja", "Una niña que iba a visitar a su abuelita", "Keila, Yander y Walter");
-        cuent.idC = i;
-        cuent.imagenes= cuentoCaperucita;
-        cuentos.push(cuent);
 
-    }
+    var cuent = new Cuento("Caperucita Roja", "Una nina que fue a visitar a su abuelita", " Keila-Walter-Yander", cuentoCaperucita);
+    cuentos.push(cuent);
+    var cuent1 = new Cuento("Cenicienta", "Una joven huerfana a la que un hada le cambio la vida", " Keila-Walter-Yander", cenicienta);
+    cuentos.push(cuent1);
+    var cuent2 = new Cuento("Aladino", "Un apuesto joven y un genio de la lámpara", " Keila-Walter-Yander", aladin);
+    cuentos.push(cuent2);
+
 }
 
 function crearCuento() {
     idCuento++;
     title = $('input:text[name=fname]').val();
     des = $('input:text[name=fdescripcion]').val();
-    alert("Se ha guardado con éxito");
     cre = $('input:text[name=fcreditos]').val();
 
-    cuent = new Cuento(title, des, cre);
-    cuent.imagenes = cuentosIm;
-    cuent.idC = idCuento;
-    cuentos.push(cuent);
-    console.log(cuent);
+    cuent = new Cuento(title, des, cre, cuentosIm);
+   
+cuentos.push(cuent);
+localStorageCuentos(cuentos);
 }
 
+
+function getCuentosLS(){
+    var items=localStorage.getItem("cuentos");
+    if(items == null) 
+    {
+        cuentos=[];
+    }
+    else{
+       cuentos =JSON.parse(items);
+    }
+     return cuentos;
+}
+
+function localStorageCuentos(cuentos){
+    localStorage.setItem("cuentos",JSON.stringify(cuentos));
+
+}
 
 
 $(document).ready(function () {
     cargar();
-    
-  
+
+ 
+
     $(".NuevaHoja").click(function () {
         var Thtml = "<div class='item'>\
                       <div id='hojaBln" + hoja + "'>\

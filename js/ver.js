@@ -1,34 +1,45 @@
+var a =0;
+var cuentosFinales=[];     
 
 
-$(document).ready(function() {
+
+$(document).ready(function () {
+    cuentosPorDefault();
+    imagenDefault();
+    imagenAgg();
     
- cuentosPorDefault();
-   imagenAgg();
+    //slider
+$('body').on('click', '#principal a', function(){
+    //alert($(this).attr('id'));
+   a=$(this).attr('id');
+    console.log(a);
+         $(".carousel-inner").append('<div class="item"><img class="imagenesCuentos"  src=' + cuentosFinales[i] + '</a></div>');
+  })
+
+
 });
 
 function imagenAgg() {
-       let count =0;
-     for (let value of cuentos) {
-         console.log(value);
-   $("#principal", {
+    var aux = getCuentosLS();
    
-}).append(
-    $('<li>', {}).append($('<li>', {}).append($('<a>',{
-        'href':'../paginas/cuentos.html',
-            'text':"hola"
-    }).append(
-          $('<div>',{
-            'class':'imagenes2'
-          }).append(
-          $('<img>',{
-            'class':'imagenesUl',
-              'src': value.imagenes[count]
-          })
-          
-        )
-    )
-)
-       ))
-   }
+    for (let value of aux) {
+ cuentosFinales.push(value);
+        $("#principal").append('<li><a id='+ a.toString()+ ' href="../paginas/cuento.html"><div class="col-lg-4"><img class="imagenesCuentos"  src=' + value.imagenes[0] + '>' + value.titulo + '</div></a></li>');
+a++;
+    }
+
 
 }
+
+function imagenDefault() {
+ 
+    for (let value of cuentos) {
+       cuentosFinales.push(value);
+        $("#principal").append('<li><a id='+ a.toString()+ '  href="../paginas/cuento.html"><div class="col-lg-4"><img class="imagenesCuentos"  src=' + value.imagenes[0] + '>' + value.titulo + '</div></a></li>');
+a++;
+    }
+
+
+}
+
+

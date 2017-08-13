@@ -59,6 +59,11 @@
     width: 90.5%;
 }
 
+.imagenesCuentos {
+    width: 200px;
+    height: 150px;
+}
+
 .tit{
     text-align: center;
      color:  #0099ff;
@@ -71,6 +76,7 @@
 }
 
 
+
 .imagenes3 {
     position: relative;
     width: 221px;
@@ -78,6 +84,20 @@
     overflow: hidden;
     margin-bottom: 2px;
     z-index: 1;
+    background-color: transparent;
+  
+    
+}
+
+.cuentos {
+    position: relative;
+  overflow: hidden;
+    margin-bottom: 2px;
+             margin-left:40px;
+     margin-right:40px;
+    z-index: 1;
+    width: 250px;
+    height: 200px;
     background-color: transparent;
    
 }
