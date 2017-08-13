@@ -12,8 +12,10 @@ $(document).ready(function () {
 $('body').on('click', '#principal a', function(){
     //alert($(this).attr('id'));
    a=$(this).attr('id');
+    obj=cuentosFinales[a]
+    for (let imagenes of obj.imagenes)
     console.log(a);
-         $(".carousel-inner").append('<div class="item"><img class="imagenesCuentos"  src=' + cuentosFinales[i] + '</a></div>');
+         $(".carousel-inner").append('<div class="item"><img src=' + imagenes + '</a></div>');
   })
 
 
